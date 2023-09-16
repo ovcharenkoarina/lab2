@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset ="UTF-8">
-        <title><h1>ITMD-361 Internet Technologies and Web Design</h1></title>
-    </head>
-    <body>
-        <h1>ITMD-361 Internet Technologies and Web Design</h1>
+  <head>
+    <meta charset="UTF-8">
+    <title>Volonteer Form</title>
+  </head>
+  <body>
+    <h1>Volonteer Form</h1>
+    <form method="post" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php">
+      <fieldset>
+        <h2>My Info</h2>
         <div>
-            <h3>Spring 2023</h3>
-            <p>Arina Ovcharenko aovcharenko@hawk.iit.edu</p>
+          <div><label>First Name:<input type="text" name="first_name_field" placeholder="First Name"></label></div>
+          <div><label>Last Name:<input type="text" name="last_name_field" placeholder="Last Name"></label></div>
+          <div><label>Phone Number:<input type="tel" name="phone_field" placeholder="Phone Number"></label></div>
+          <div><label>Email Adress:<input type="text" name="email_field" placeholder="Email Adress"></label></div>
         </div>
-        
         <div>
-            <h2>Professor:</h2>
-            <p>Daniel Krieglstein</p>
+          <h3>Gender:</h3>
+          <label>Male:<input type="radio" name="gender_field" value="male" checked></label>
+          <label>Female:<input type="radio" name="gender_field" value="female" checked></label>
         </div>
-
         <div>
-           <h2>Lecture Days, Time and Place:</h2>
-           <p>Tuesdays 6:25pm to 9:05pm, Mies Campus | Hermann Hall</p>
+          <h3>Age:</h3>
+          <select name="age_field">
+            <option value="under 18">under 18</option>
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45-54">45-54</option>
+            <option value="55-64">55-64</option>
+            <option value="65 and over">65 and over</option>
+          </select>
         </div>
-
+      </fieldset>
+      <fieldset>
+        <h2>My availability</h2>
         <div>
-            <h2>Course Catalog Description:</h2>
-            <p>This course will cover the creation of Web pages and sites using HTML, CSS, Javascript and graphical applications. Networked multimedia distribution technologies are also explored. The design of effective Web site including page layout, user interface design, graphic design, content flow and site structure as well as management of Web site resources including intranet management and design considerations are addressed. Students design and create a major Web site with multiple pages and cross-linked structures. Prerequisites: [none]Credit: 2-2-3 Semester Hours </p>
-        
+          <h3>Days available:</h3>
+          <div>
+            <div><label><input type="checkbox" name="available_field[]" value="Monday">Monday</label></div>
+            <div><label><input type="checkbox" name="available_field[]" value="Tuesday">Tuesday</label></div>
+            <div><label><input type="checkbox" name="available_field[]" value="Wednesday"></label>Wednesday</div>
+            <div><label><input type="checkbox" name="available_field[]" value="Thursday">Thursday</label></div>
+            <div><label><input type="checkbox" name="available_field[]" value="Friday"></label>Friday</div>
+            <div><label><input type="checkbox" name="available_field[]" value="Saturday"></label>Saturday</div>
+          </div>
         </div>
-  
         <div>
-            <h2>Course Outcomes:</h2>
-            <p>Students completing this course will be able to:</p>
-            <ul>
-                <li>Recognize HTML, CSS and JavaScript mark-up and code in a web page/application.</li>
-                <li>Select the proper mark-up tags or code to achieve a particular result.</li>
-                <li>Identify improperly used mark-up and code.</li>
-                <li>Produce modern standards compliant web pages.</li>
-                <li>Deploy web pages to a public server.</li>
-            </ul>
+          <h3>Any Comments?</h3>
+          <textarea name="comments_field" placeholder="Comments"></textarea>
         </div>
-
-        <div>
-            <h2>Course Objectives:</h2>
-            <p>At the conclusion of this course, each successful student will able to:</p>
-            <ul>
-                <li>Explain the client and server architecture of the Internet and related web technologies.</li>
-                <li>Use a basic text editor and other software tools to create web pages using HTML, CSS, JavaScript, jQuery, and images.</li>
-                <li>Deploy web pages to a Linux-based web server using sftp.</li>
-            </ul>
-        </div>
-
-        
-    </body>
-
+      </fieldset>
+      <div>
+        <input type="hidden" name="hidden_field" value="aovcharenko">
+      </div>
+      <div>
+        <input type="submit" value="Send me!">
+      </div>
+    </form>
+  </body>
 </html>
